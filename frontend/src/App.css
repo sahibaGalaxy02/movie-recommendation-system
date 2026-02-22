@@ -1,0 +1,209 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: black;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00bfff;
+}
+
+.search-box {
+  width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* Section title */
+.section-title {
+  font-size: 22px;
+  margin: 20px 40px 10px;
+}
+
+/* Movie Row */
+.movie-row {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+.movie-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+/* Movie Card */
+.movie-card {
+  min-width: 200px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.15);
+}
+
+/* Poster */
+.movie-poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Title */
+.movie-title {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: -35px;
+  right: 0;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Search Suggestions */
+.suggestions {
+  position: absolute;
+  background: #111;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #222;
+}
+
+.suggestion-item img {
+  width: 40px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: white;
+  padding: 50px 40px;
+  border-top: 1px solid #222;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-column p {
+  color: gray;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.footer-column p:hover {
+  color: white;
+}
+
+.footer-link {
+  color: #00bfff;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+
+.footer-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+}
+
+.footer-btn {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #00bfff;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-btn:hover {
+  background: #009acd;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  color: gray;
+}

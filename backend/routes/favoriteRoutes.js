@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const Favorite = require("../models/Favorite");
+const {getUser}=require('../controllers/user');
 
 router.post("/", async (req, res) => {
     const favorite = new Favorite(req.body);
