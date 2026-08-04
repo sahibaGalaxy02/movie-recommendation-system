@@ -6,19 +6,6 @@ A full-stack web application that provides personalized movie recommendations us
 
 ---
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
-
----
 
 ## Overview
 
@@ -75,89 +62,7 @@ movie-recommendation-system/
 └── README.md
 ```
 
----
 
-## 🚀 Installation
 
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn package manager
-- MongoDB instance (local or cloud)
-
-### Frontend Setup
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-The frontend will start on `http://localhost:5173`
-
-### Backend Setup
-
-```bash
-cd backend
-npm install
-
-# Create a .env file with your configuration
-echo "MONGODB_URI=your_mongodb_connection_string" > .env
-echo "PORT=5000" >> .env
-
-# Start the backend server
-npm run dev
-```
-
-The backend will start on `http://localhost:5000`
-
----
-
-## 📖 Usage
-
-1. **Start both servers** (frontend and backend)
-2. **Navigate to the frontend URL** in your browser
-3. **Create an account** or log in with existing credentials
-4. **Rate movies** or add movies to favorites
-5. **Get personalized recommendations** based on your preferences
-
----
-
-## 🔌 API Endpoints
-
-### Movies
-- `GET /api/movies` - Get all movies
-- `GET /api/movies/:id` - Get movie details
-- `GET /api/movies/recommendations` - Get recommendations for user
-
-### Users
-- `POST /api/users/register` - Register new user
-- `POST /api/users/login` - User login
-- `GET /api/users/:id` - Get user profile
-- `PUT /api/users/:id` - Update user profile
-
-### Ratings
-- `POST /api/ratings` - Add movie rating
-- `GET /api/ratings/user/:userId` - Get user ratings
-- `DELETE /api/ratings/:id` - Remove rating
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📧 Support
-
-For questions or issues, please create a GitHub issue or contact the repository owner.
-
----
 
 **Happy watching! 🍿**
