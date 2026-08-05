@@ -4,7 +4,7 @@ const Footer = () => {
 
       <div className="footer-grid">
 
-        {/* Column 1 */}
+        {/* Column 1 */}..
         <div className="footer-column">
           <h3>CineHub</h3>
           <p>Home</p>
