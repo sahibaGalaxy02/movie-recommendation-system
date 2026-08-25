@@ -1,24 +1,7 @@
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: black;
-  padding: 15px;
-}
-
-.menu-btn {
-  font-size: 26px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.navbar h1 {
-  color: #00bfff;
-}
-
-.navbar input {
-  padding: 8px;
-  border-radius: 5px;
-}
+/*
+  Navbar layout/theme (color, sizing, sticky positioning, responsive search)
+  now lives in App.css as the single source of truth — this file previously
+  redefined .navbar/.logo with different values and silently fought with it
+  depending on module load order. Kept as an empty file so the existing
+  `import "./Navbar.css"` in Navbar.tsx doesn't need to change.
+*/
