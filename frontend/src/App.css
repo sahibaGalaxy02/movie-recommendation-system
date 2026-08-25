@@ -405,15 +405,13 @@ h1, h2, h3, h4 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.5px; }
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.88);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
   z-index: 999;
   backdrop-filter: blur(8px);
 }
-
-.trailer-modal-bg.open { display: flex; }
 
 .trailer-modal-box {
   width: 640px;
