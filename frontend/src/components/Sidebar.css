@@ -1,42 +1,6 @@
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -240px;
-  width: 240px;
-  height: 100vh;
-  background: #0b0b0b;
-  transition: 0.3s;
-  z-index: 1000;
-}
-
-.sidebar.open {
-  left: 0;
-}
-
-.logo {
-  color: #00bfff;
-  margin-bottom: 30px;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: white;
-  text-decoration: none;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.menu-item:hover {
-  background: #1c1c1c;
-}
-
-.menu-item.active {
-  background: #00bfff33;
-}
-
-.icon {
-  font-size: 18px;
-}
+/*
+  Sidebar layout/theme now lives in App.css (see .sidebar, .sidebar-backdrop,
+  .sidebar-brand, .menu-item, .icon) so it shares tokens with the rest of the
+  app instead of a second, conflicting .logo/.menu-item definition. Kept as
+  an empty file so the existing `import "./Sidebar.css"` doesn't need to change.
+*/
