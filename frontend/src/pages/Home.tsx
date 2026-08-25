@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchMovies } from "../services/api";
 import MovieRow from "../components/MovieRow";
+import Loader from "../components/Loader";
 import { useOutletContext } from "react-router-dom";
 
 interface Movie {
@@ -17,26 +18,47 @@ export default function Home() {
   const [trending, setTrending] = useState<Movie[]>([]);
   const [popular, setPopular] = useState<Movie[]>([]);
   const [topRated, setTopRated] = useState<Movie[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchMovies("now_playing").then(setTrending);
-    fetchMovies("popular").then(setPopular);
-    fetchMovies("top_rated").then(setTopRated);
+    Promise.all([
+      fetchMovies("now_playing").then(setTrending),
+      fetchMovies("popular").then(setPopular),
+      fetchMovies("top_rated").then(setTopRated),
+    ]).finally(() => setLoading(false));
   }, []);
 
   const filteredTrending = trending.filter(movie =>
     movie.title.toLowerCase().includes(search.toLowerCase())
   );
 
+  if (loading) {
+    return (
+      <div className="page">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <div className="page">
-      <h2>Trending</h2>
-      <MovieRow movies={filteredTrending} />
+      <div className="section-header">
+        <h2 className="section-title">Trending</h2>
+      </div>
+      {filteredTrending.length ? (
+        <MovieRow movies={filteredTrending} />
+      ) : (
+        <p className="row-empty">No movies match your search.</p>
+      )}
 
-      <h2>Popular</h2>
+      <div className="section-header">
+        <h2 className="section-title">Popular</h2>
+      </div>
       <MovieRow movies={popular} />
 
-      <h2>Top Rated</h2>
+      <div className="section-header">
+        <h2 className="section-title">Top Rated</h2>
+      </div>
       <MovieRow movies={topRated} />
     </div>
   );

@@ -33,6 +33,7 @@ export default function MovieCard({ movie }: any) {
             src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
             alt={movie.title}
             className="movie-poster"
+            loading="lazy"
           />
           {movie.vote_average && (
             <span className="movie-rating">★ {movie.vote_average.toFixed(1)}</span>
