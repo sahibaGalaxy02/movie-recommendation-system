@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import type { Dispatch, SetStateAction } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaSearch } from "react-icons/fa";
 
 interface NavbarProps {
   setOpen: Dispatch<SetStateAction<boolean>>;
@@ -16,19 +16,24 @@ export default function Navbar({ setOpen, setSearch }: NavbarProps) {
       <button
         className="menu-btn"
         onClick={() => setOpen(prev => !prev)}
+        aria-label="Toggle menu"
       >
-        <FaBars size={22} />
+        <FaBars size={18} />
       </button>
 
       {/* LOGO */}
-      <h1 className="logo">CineHub</h1>
+      <h1 className="logo">Cine<span>Hub</span></h1>
 
       {/* SEARCH */}
-      <input
-        className="search"
-        placeholder="Search movies..."
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <div className="search-wrap">
+        <FaSearch size={13} />
+        <input
+          className="search"
+          placeholder="Search movies..."
+          aria-label="Search movies"
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
 
     </div>
   );

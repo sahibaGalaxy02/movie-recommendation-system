@@ -11,7 +11,7 @@ export default function Sidebar({
 }) {
  return (
   <div className={`sidebar ${open ? "open" : ""}`}>
-    <h2 className="logo">CineHub</h2>
+    <h2 className="sidebar-brand">CineHub</h2>
 
     <nav>
       <NavLink to="/" className="menu-item" onClick={() => setOpen(false)}>
